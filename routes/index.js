@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/set', function(req, res, next) {
 	[r, g, b, w] = [req.body.r, req.body.g, req.body.b, req.body.w];
-	exec(`pigs p 17 ${g}`, () => {});
+	exec(`pigs p 27 ${g}`, () => {});
 	exec(`pigs p 23 ${w}`, () => {});
 	exec(`pigs p 22 ${r}`, () => {});
 	exec(`pigs p 24 ${b}`, () => {});

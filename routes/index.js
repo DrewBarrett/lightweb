@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express', r: r, b: b, g: g, w: w });
 });
 
+router.get('/get', function(req, res, next) {
+  res.send({r: r, b: b, g: g, w: w})
+});
+
 router.post('/set', function(req, res, next) {
 	[r, g, b, w] = [req.body.r, req.body.g, req.body.b, req.body.w];
 	exec(`pigs p 27 ${g}`, () => {});
